@@ -35,7 +35,6 @@
       thisBook.getElements();
       thisBook.render();
       thisBook.initAction();
-      thisBook.app();
     }
     initData() {
       const thisBook = this;
@@ -120,7 +119,7 @@
 
           } else {
 
-            thisBook.favoriteBooks.splice(favoriteBooks.indexOf(id), 1);
+            thisBook.favoriteBooks.splice(thisBook.favoriteBooks.indexOf(id), 1);
 
             book.classList.remove('favorite');
           }
@@ -161,4 +160,5 @@
     }
   }
   const app = new BooksList();
+  console.log(app);
 }
